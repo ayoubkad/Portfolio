@@ -1,0 +1,3 @@
+/Users/ayoubkaddioui/Documents/New project/build/CMakeFiles/snake.dir
+/Users/ayoubkaddioui/Documents/New project/build/CMakeFiles/edit_cache.dir
+/Users/ayoubkaddioui/Documents/New project/build/CMakeFiles/rebuild_cache.dir

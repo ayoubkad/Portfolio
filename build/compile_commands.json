@@ -1,0 +1,8 @@
+[
+{
+  "directory": "/Users/ayoubkaddioui/Documents/New project/build",
+  "command": "/usr/bin/clang   -g -std=gnu11 -arch arm64 -o CMakeFiles/snake.dir/src/main.c.o -c \"/Users/ayoubkaddioui/Documents/New project/src/main.c\"",
+  "file": "/Users/ayoubkaddioui/Documents/New project/src/main.c",
+  "output": "CMakeFiles/snake.dir/src/main.c.o"
+}
+]
