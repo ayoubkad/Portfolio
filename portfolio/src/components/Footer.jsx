@@ -52,6 +52,9 @@ export default function Footer() {
           </a>
         </div>
       </div>
+      <div className="mx-auto mt-8 max-w-6xl border-t border-white/5 px-6 pt-6 text-center text-xs text-slate-500">
+        © {new Date().getFullYear()} Ayoub Kaddioui. All rights reserved.
+      </div>
     </footer>
   );
 }

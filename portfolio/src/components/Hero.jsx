@@ -1,4 +1,35 @@
+import { useEffect, useRef, useState } from "react";
 import { ArrowUpRight, ShieldCheck, Sparkles } from "lucide-react";
+
+function AnimatedCounter({ end, suffix = "", duration = 2000 }) {
+  const [count, setCount] = useState(0);
+  const ref = useRef(null);
+  const started = useRef(false);
+
+  useEffect(() => {
+    const el = ref.current;
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting && !started.current) {
+          started.current = true;
+          const start = performance.now();
+          const step = (now) => {
+            const progress = Math.min((now - start) / duration, 1);
+            const eased = 1 - Math.pow(1 - progress, 3);
+            setCount(Math.floor(eased * end));
+            if (progress < 1) requestAnimationFrame(step);
+          };
+          requestAnimationFrame(step);
+        }
+      },
+      { threshold: 0.5 }
+    );
+    if (el) observer.observe(el);
+    return () => observer.disconnect();
+  }, [end, duration]);
+
+  return <span ref={ref}>{count}{suffix}</span>;
+}
 
 export default function Hero() {
   return (
@@ -30,10 +61,10 @@ export default function Hero() {
           <div className="reveal flex flex-wrap items-center gap-4" data-reveal>
             <a
               className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-[#d79b2e] to-[#f2c261] px-6 py-3 text-sm font-semibold text-[#0b2f3a] shadow-lg shadow-[#d79b2e]/30 transition hover:-translate-y-0.5"
-              href="/resume.pdf"
+              href="/CV.pdf"
               download
             >
-              Download Resume
+              Download CV
               <ArrowUpRight className="h-4 w-4" />
             </a>
             <a
@@ -48,19 +79,19 @@ export default function Hero() {
             data-reveal
           >
             <div className="rounded-2xl border border-white/10 bg-white/5 p-4">
-              <p className="text-2xl font-semibold text-white">5+ yrs</p>
+              <p className="text-2xl font-semibold text-white"><AnimatedCounter end={5} suffix="+ yrs" /></p>
               <p className="mt-1 text-xs uppercase tracking-[0.2em] text-slate-400">
                 Experience
               </p>
             </div>
             <div className="rounded-2xl border border-white/10 bg-white/5 p-4">
-              <p className="text-2xl font-semibold text-white">12+</p>
+              <p className="text-2xl font-semibold text-white"><AnimatedCounter end={12} suffix="+" /></p>
               <p className="mt-1 text-xs uppercase tracking-[0.2em] text-slate-400">
                 Projects
               </p>
             </div>
             <div className="rounded-2xl border border-white/10 bg-white/5 p-4">
-              <p className="text-2xl font-semibold text-white">3</p>
+              <p className="text-2xl font-semibold text-white"><AnimatedCounter end={3} /></p>
               <p className="mt-1 text-xs uppercase tracking-[0.2em] text-slate-400">
                 Domains
               </p>
