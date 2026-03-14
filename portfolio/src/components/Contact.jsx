@@ -1,6 +1,6 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import emailjs from "@emailjs/browser";
-import { Github, Linkedin, Mail } from "lucide-react";
+import { Github, Linkedin, Mail, CheckCircle, AlertTriangle } from "lucide-react";
 
 export default function Contact() {
   const [form, setForm] = useState({ name: "", email: "", message: "" });
@@ -8,6 +8,13 @@ export default function Contact() {
   const [submitted, setSubmitted] = useState(false);
   const [submitError, setSubmitError] = useState(null);
   const [isSending, setIsSending] = useState(false);
+
+  useEffect(() => {
+    if (submitted) {
+      const timer = setTimeout(() => setSubmitted(false), 5000);
+      return () => clearTimeout(timer);
+    }
+  }, [submitted]);
 
   const validate = () => {
     const errs = {};
@@ -41,7 +48,12 @@ export default function Contact() {
           templateID,
           {
             from_name: form.name,
+            to_name: "Ayoub",
             from_email: form.email,
+            user_name: form.name,
+            user_email: form.email,
+            name: form.name,
+            email: form.email,
             message: form.message,
             reply_to: form.email,
           },
@@ -71,8 +83,37 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="scroll-mt-24 py-20">
+    <section id="contact" className="scroll-mt-24 py-20 relative">
       <div className="mx-auto max-w-6xl px-6">
+        {/* Toast Notifications */}
+        <div className="fixed left-1/2 top-24 z-50 flex -translate-x-1/2 flex-col gap-4">
+            {submitted && (
+              <div className="animate-fade-up flex items-start gap-4 rounded-xl border border-green-500/30 bg-[#0b2f3a] p-4 shadow-xl shadow-black/50 backdrop-blur-md">
+                <div className="shrink-0 rounded-full bg-green-500/20 p-2 text-green-400">
+                  <CheckCircle className="h-5 w-5" />
+                </div>
+                <div>
+                  <h4 className="text-sm font-semibold text-green-100">
+                    Message envoyé !
+                  </h4>
+                  <p className="mt-1 text-xs text-green-200/80">
+                    Merci ! Je vous répondrai très vite.
+                  </p>
+                </div>
+              </div>
+            )}
+            {submitError && (
+              <div className="animate-fade-up flex items-start gap-4 rounded-xl border border-red-500/30 bg-[#0b2f3a] p-4 shadow-xl shadow-black/50 backdrop-blur-md">
+                <div className="shrink-0 rounded-full bg-red-500/20 p-2 text-red-400">
+                  <AlertTriangle className="h-5 w-5" />
+                </div>
+                <div className="text-xs text-red-200">
+                  {submitError}
+                </div>
+              </div>
+            )}
+        </div>
+
         <div className="grid gap-10 lg:grid-cols-[1.1fr_0.9fr]">
           <div className="reveal space-y-6" data-reveal>
             <p className="text-xs uppercase tracking-[0.3em] text-slate-300">
@@ -119,16 +160,6 @@ export default function Contact() {
             data-reveal
             onSubmit={handleSubmit}
           >
-            {submitted && (
-              <div className="mb-4 rounded-2xl border border-green-500/30 bg-green-500/10 px-4 py-3 text-sm text-green-300">
-                ✓ Message envoyé avec succès !
-              </div>
-            )}
-            {submitError && (
-              <div className="mb-4 rounded-2xl border border-red-500/30 bg-red-500/10 px-4 py-3 text-sm text-red-300">
-                ⚠ {submitError}
-              </div>
-            )}
             <div className="space-y-4">
               <div>
                 <label className="text-xs uppercase tracking-[0.2em] text-slate-300">
