@@ -1,10 +1,12 @@
 import { useState } from "react";
+import emailjs from "@emailjs/browser";
 import { Github, Linkedin, Mail } from "lucide-react";
 
 export default function Contact() {
   const [form, setForm] = useState({ name: "", email: "", message: "" });
   const [errors, setErrors] = useState({});
   const [submitted, setSubmitted] = useState(false);
+  const [isSending, setIsSending] = useState(false);
 
   const validate = () => {
     const errs = {};
@@ -21,8 +23,32 @@ export default function Contact() {
     const errs = validate();
     setErrors(errs);
     if (Object.keys(errs).length === 0) {
-      setSubmitted(true);
-      setForm({ name: "", email: "", message: "" });
+      setIsSending(true);
+      emailjs
+        .send(
+          import.meta.env.VITE_EMAILJS_SERVICE_ID,
+          import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+          {
+            from_name: form.name,
+            from_email: form.email,
+            message: form.message,
+            reply_to: form.email,
+          },
+          import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+        )
+        .then(
+          (result) => {
+            console.log(result.text);
+            setSubmitted(true);
+            setForm({ name: "", email: "", message: "" });
+            setIsSending(false);
+          },
+          (error) => {
+            console.log(error.text);
+            setIsSending(false);
+            alert("Une erreur est survenue lors de l'envoi du message.");
+          }
+        );
     }
   };
 
@@ -139,10 +165,11 @@ export default function Contact() {
               </div>
             </div>
             <button
-              className="mt-6 w-full rounded-2xl bg-gradient-to-r from-[#d79b2e] to-[#f2c261] px-4 py-3 text-sm font-semibold text-[#0b2f3a] shadow-lg shadow-[#d79b2e]/30 transition hover:-translate-y-0.5"
+              className="mt-6 w-full rounded-2xl bg-gradient-to-r from-[#d79b2e] to-[#f2c261] px-4 py-3 text-sm font-semibold text-[#0b2f3a] shadow-lg shadow-[#d79b2e]/30 transition hover:-translate-y-0.5 disabled:opacity-50 disabled:cursor-not-allowed"
               type="submit"
+              disabled={isSending}
             >
-              Send Message
+              {isSending ? "Sending..." : "Send Message"}
             </button>
           </form>
         </div>
