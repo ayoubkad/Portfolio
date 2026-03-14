@@ -77,7 +77,7 @@ export default function Contact() {
             <div className="flex flex-wrap gap-4 text-sm">
               <a
                 className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-slate-200 transition hover:border-[#f2c261]/50"
-                href="https://www.linkedin.com/"
+                href="https://www.linkedin.com/in/ayoub-kaddioui-729612295"
                 target="_blank"
                 rel="noreferrer"
               >
