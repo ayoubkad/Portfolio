@@ -6,6 +6,7 @@ export default function Contact() {
   const [form, setForm] = useState({ name: "", email: "", message: "" });
   const [errors, setErrors] = useState({});
   const [submitted, setSubmitted] = useState(false);
+  const [submitError, setSubmitError] = useState(null);
   const [isSending, setIsSending] = useState(false);
 
   const validate = () => {
@@ -23,18 +24,28 @@ export default function Contact() {
     const errs = validate();
     setErrors(errs);
     if (Object.keys(errs).length === 0) {
+      const serviceID = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+      const templateID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+      const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
+
+      if (!serviceID || !templateID || !publicKey) {
+        setSubmitError("Configuration EmailJS incomplète. Vérifiez les variables d'environnement.");
+        return;
+      }
+
       setIsSending(true);
+      setSubmitError(null);
       emailjs
         .send(
-          import.meta.env.VITE_EMAILJS_SERVICE_ID,
-          import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+          serviceID,
+          templateID,
           {
             from_name: form.name,
             from_email: form.email,
             message: form.message,
             reply_to: form.email,
           },
-          import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+          publicKey
         )
         .then(
           (result) => {
@@ -44,9 +55,10 @@ export default function Contact() {
             setIsSending(false);
           },
           (error) => {
-            console.log(error.text);
+            console.error("EmailJS Error:", error);
             setIsSending(false);
-            alert("Une erreur est survenue lors de l'envoi du message.");
+            const errorMessage = error.text || JSON.stringify(error) || "Erreur inconnue";
+            setSubmitError(`Erreur: ${errorMessage}. Veuillez vérifier la console.`);
           }
         );
     }
@@ -110,6 +122,11 @@ export default function Contact() {
             {submitted && (
               <div className="mb-4 rounded-2xl border border-green-500/30 bg-green-500/10 px-4 py-3 text-sm text-green-300">
                 ✓ Message envoyé avec succès !
+              </div>
+            )}
+            {submitError && (
+              <div className="mb-4 rounded-2xl border border-red-500/30 bg-red-500/10 px-4 py-3 text-sm text-red-300">
+                ⚠ {submitError}
               </div>
             )}
             <div className="space-y-4">
