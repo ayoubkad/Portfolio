@@ -27,7 +27,7 @@ export default function Footer() {
         <div className="flex items-center gap-4">
           <a
             className="rounded-full border border-white/10 bg-white/5 p-2 text-slate-200 transition hover:border-[#f2c261]/60 hover:text-white"
-            href="https://www.linkedin.com/in/ayoub-kaddioui-729612295"
+            href="https://www.linkedin.com/in/ayoubkaddioui"
             target="_blank"
             rel="noreferrer"
             aria-label="LinkedIn"
