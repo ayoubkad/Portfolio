@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { Download, Menu, X } from "lucide-react";
+import logo from "../assets/logo.svg";
 
 export default function Navbar({ links }) {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -26,9 +27,11 @@ export default function Navbar({ links }) {
     <nav className="sticky top-4 z-50">
       <div className="mx-auto flex max-w-6xl items-center justify-between rounded-full border border-white/10 bg-[#0b2f3a]/80 px-6 py-3 backdrop-blur-xl">
         <a className="flex items-center gap-3" href="#top">
-          <span className="flex h-9 w-9 items-center justify-center rounded-full bg-gradient-to-br from-[#f2c261] to-[#d79b2e] text-sm font-semibold text-[#0b2f3a]">
-            AK
-          </span>
+          <img
+            src={logo}
+            alt="Logo"
+            className="w-[40px] h-[40px] rounded-[8px]"
+          />
           <div className="leading-tight">
             <p className="text-sm font-semibold text-white">Ayoub Kaddioui</p>
             <p className="text-xs text-slate-300">Ingénieur d'État</p>
