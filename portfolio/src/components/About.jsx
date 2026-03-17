@@ -24,21 +24,16 @@ export default function About() {
             About Me
           </p>
           <h2 className="text-3xl font-semibold text-white sm:text-4xl">
-            Engineering with clarity, intention, and real-world impact.
+            Learning with curiosity, building with purpose.
           </h2>
           <p className="text-base text-slate-200">
-            I approach software engineering as a system of thoughtful choices. From
-            problem framing to delivery, I prioritize clean architecture, predictable
-            performance, and maintainable codebases. I enjoy turning ambiguity into
-            focused roadmaps and building products that remain resilient as they grow.
+            I'm an Engineering student at FST Errachidia specializing in Computer Engineering. I built a full-stack Ethereum DApp for my PFE and designed a custom in-memory database engine in C with CI/CD pipelines.
           </p>
           <p className="text-base text-slate-200">
-            My work blends front-end craft with backend rigor. Whether I'm optimizing
-            a complex React interface or designing Spring Boot services, I rely on
-            strong engineering principles and a bias for pragmatic solutions.
+            Outside class, I co-organize tech events at the Bisoft Engineering Club. I love low-level systems as much as modern web tech — and I'm always building something.
           </p>
           <div className="flex flex-wrap gap-3">
-            {["Product strategy", "System design", "UX clarity"].map((pill) => (
+            {["Always learning", "Builder mentality", "Detail-oriented"].map((pill) => (
               <span
                 key={pill}
                 className="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-slate-200"

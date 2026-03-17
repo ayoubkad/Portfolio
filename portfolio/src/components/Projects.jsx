@@ -2,17 +2,17 @@ import { ArrowUpRight, Github } from "lucide-react";
 
 const projects = [
   {
-    title: "ApplicationeDcentraliser (Library DApp)",
+    title: "Decentralized Library DApp",
     description:
-      "Application de bibliothèque décentralisée sur Ethereum avec gestion des rôles, système de réputation, emprunts à 7 jours et couvertures hébergées sur IPFS.",
+      "Decentralized library application on Ethereum featuring role management, reputation system, 7-day borrowing logic, and book covers hosted on IPFS.",
     tags: ["React", "Solidity", "Ethereum", "IPFS", "Truffle"],
     github: "https://github.com/ayoubkad/ApplicationeDcentraliser.git",
     demo: null,
   },
   {
-    title: "Mini-Database (Student DB Engine)",
+    title: "Student DB Engine",
     description:
-      "Mini moteur de base de données étudiants en C : listes chaînées, tables de hachage, BST, CRUD complet, undo/redo et persistance binaire.",
+      "Custom in-memory database engine built in C implementing linked lists, hash tables, and BSTs with full CRUD, undo/redo, and binary persistence.",
     tags: ["C", "Data Structures", "Hashing", "BST", "CLI"],
     github: "https://github.com/ayoubkad/Mini-Database.git",
     demo: null,

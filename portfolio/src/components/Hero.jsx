@@ -49,14 +49,13 @@ export default function Hero() {
           >
             Hi, I'm Ayoub Kaddioui,
             <span className="block text-[#f2c261]">
-              Software Engineering &amp; Full-Stack Development.
+              Software Engineering Student & Builder.
             </span>
           </h1>
           <p className="reveal text-lg text-slate-200" data-reveal>
-            State Engineer in Software Engineering (Ingénieur d'État) focused on
-            building scalable products with React.js, Spring Boot, and modern
-            JavaScript. I deliver systems that are stable, fast, and designed for
-            people.
+            1st-year student at FST Errachidia, exploring web development and
+            software engineering. I build small projects to learn, grow, and turn
+            ideas into real products.
           </p>
           <div className="reveal flex flex-wrap items-center gap-4" data-reveal>
             <a
@@ -79,21 +78,21 @@ export default function Hero() {
             data-reveal
           >
             <div className="rounded-2xl border border-white/10 bg-white/5 p-4">
-              <p className="text-2xl font-semibold text-white"><AnimatedCounter end={5} suffix="+ yrs" /></p>
+              <p className="text-2xl font-semibold text-white">1st year</p>
               <p className="mt-1 text-xs uppercase tracking-[0.2em] text-slate-400">
-                Experience
+                Student
               </p>
             </div>
             <div className="rounded-2xl border border-white/10 bg-white/5 p-4">
-              <p className="text-2xl font-semibold text-white"><AnimatedCounter end={12} suffix="+" /></p>
+              <p className="text-2xl font-semibold text-white"><AnimatedCounter end={3} suffix="+" /></p>
               <p className="mt-1 text-xs uppercase tracking-[0.2em] text-slate-400">
                 Projects
               </p>
             </div>
             <div className="rounded-2xl border border-white/10 bg-white/5 p-4">
-              <p className="text-2xl font-semibold text-white"><AnimatedCounter end={3} /></p>
+              <p className="text-2xl font-semibold text-white">2025</p>
               <p className="mt-1 text-xs uppercase tracking-[0.2em] text-slate-400">
-                Domains
+                Started
               </p>
             </div>
           </div>
@@ -105,7 +104,7 @@ export default function Hero() {
             <div className="relative space-y-6">
               <div>
                 <p className="text-xs uppercase tracking-[0.3em] text-slate-300">
-                  Core Stack
+                  My Toolkit
                 </p>
                 <h2 className="mt-3 text-2xl font-semibold text-white">
                   React.js · Spring Boot · JavaScript (ES6+)
@@ -122,7 +121,7 @@ export default function Hero() {
                 </p>
               </div>
               <div className="flex flex-wrap gap-2">
-                {["Product mindset", "API design", "Scalable UI"].map((tag) => (
+                {["Problem solver", "Fast learner", "Team player"].map((tag) => (
                   <span
                     key={tag}
                     className="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-slate-200"
@@ -133,7 +132,7 @@ export default function Hero() {
               </div>
               <div className="flex items-center gap-3 rounded-2xl border border-white/10 bg-[#0b2f3a]/70 px-4 py-3 text-xs uppercase tracking-[0.3em] text-slate-200">
                 <ShieldCheck className="h-4 w-4 text-[#f2c261]" />
-                Engineering principles first
+                Learning by doing
               </div>
             </div>
           </div>

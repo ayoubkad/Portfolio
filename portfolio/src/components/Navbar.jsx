@@ -24,7 +24,7 @@ export default function Navbar({ links }) {
   }, [links]);
 
   return (
-    <nav className="sticky top-4 z-50">
+    <nav className="fixed inset-x-0 top-4 z-50 px-4">
       <div className="mx-auto flex max-w-6xl items-center justify-between rounded-full border border-white/10 bg-[#0b2f3a]/80 px-6 py-3 backdrop-blur-xl">
         <a className="flex items-center gap-3" href="#top">
           <img
