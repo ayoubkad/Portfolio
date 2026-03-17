@@ -1,22 +1,36 @@
-# Snake (ncurses)
+# Ayoub Kaddioui — Portfolio
 
-Simple Snake en C avec interface ncurses.
+Personal portfolio built with React + Vite, showcasing my
+projects, skills, and background as a CS engineering student
+at FST Errachidia.
 
-## Build (CMake)
+## 🚀 Live Demo
+[kaddioui.dev](https://...)
 
-```bash
-mkdir -p build
-cmake -S . -B build
-cmake --build build
-```
+## 🛠️ Built With
+- React + Vite
+- CSS / Tailwind
+- Deployed on Vercel / Netlify
 
-## Lancer
+## ⚡ Optimizations
+- **Vite Build**: Blazing fast build times and optimized production bundles.
+- **Tailwind CSS**: Zero runtime overhead with JIT compiler ensuring only used styles are shipped.
+- **Responsive Design**: Mobile-first architecture ensuring consistent experience across all devices.
+- **Accessibility (a11y)**: Semantic HTML and ARIA labels for better screen reader support.
+- **Modern React**: Functional components and hooks for efficient rendering.
 
-```bash
-./build/snake
-```
+## 📁 Sections
+- Hero — intro & core stack
+- About — background & values
+- Tech Stack — tools I use
+- Projects — what I've built
+- Contact — get in touch
 
-## Controles
+## 🏃 Run Locally
+git clone https://github.com/ayoubkad/portfolio
+cd portfolio
+npm install
+npm run dev
 
-- Fleches ou WASD pour bouger
-- `q` pour quitter
+## 📄 License
+MIT
