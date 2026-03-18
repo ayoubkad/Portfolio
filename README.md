@@ -4,6 +4,12 @@ Personal portfolio built with React + Vite, showcasing my
 projects, skills, and background as a CS engineering student
 at FST Errachidia.
 
+## Repository Description
+- `portfolio/`: React + Vite single-page site styled with Tailwind; contact form uses EmailJS credentials from `.env`.
+- `src/`: Small C/ncurses snake game built via CMake (outputs in `build/`).
+- `build/`: CMake build artifacts for the snake game; regenerate as needed.
+- See `LEARN.md` for setup, environment variables, project layout, and deployment notes.
+
 ## 🚀 Live Demo
 [kaddioui.dev](https://...)
 
@@ -28,7 +34,7 @@ at FST Errachidia.
 
 ## 🏃 Run Locally
 git clone https://github.com/ayoubkad/portfolio
-cd portfolio
+cd portfolio/portfolio
 npm install
 npm run dev
 
