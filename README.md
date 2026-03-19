@@ -1,5 +1,7 @@
 # Ayoub Kaddioui — Portfolio
 
+![Portfolio Preview](portfolio/images/img.png)
+
 Personal portfolio built with React + Vite, showcasing my
 projects, skills, and background as a CS engineering student
 at FST Errachidia.
