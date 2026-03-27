@@ -61,9 +61,10 @@ export default function Hero() {
             <a
               className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-[#d79b2e] to-[#f2c261] px-6 py-3 text-sm font-semibold text-[#0b2f3a] shadow-lg shadow-[#d79b2e]/30 transition hover:-translate-y-0.5"
               href="/CV.pdf"
-              download
+              target="_blank"
+              rel="noopener noreferrer"
             >
-              Download CV
+              View CV
               <ArrowUpRight className="h-4 w-4" />
             </a>
             <a

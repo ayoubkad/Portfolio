@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Download, Menu, X } from "lucide-react";
+import { Eye, Menu, X } from "lucide-react";
 import logo from "../assets/logo.svg";
 
 export default function Navbar({ links }) {
@@ -56,10 +56,11 @@ export default function Navbar({ links }) {
           <a
             className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-[#d79b2e] to-[#f2c261] px-4 py-2 text-xs font-semibold text-[#0b2f3a] shadow-lg shadow-[#d79b2e]/30 transition hover:-translate-y-0.5"
             href="/CV.pdf"
-            download
+            target="_blank"
+            rel="noopener noreferrer"
           >
-            <Download className="h-4 w-4" />
-            <span className="hidden sm:inline">Download CV</span>
+            <Eye className="h-4 w-4" />
+            <span className="hidden sm:inline">View CV</span>
             <span className="sm:hidden">CV</span>
           </a>
           <button
