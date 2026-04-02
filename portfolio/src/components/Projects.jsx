@@ -2,6 +2,14 @@ import { ArrowUpRight, Github } from "lucide-react";
 
 const projects = [
   {
+    title: "TURATH.ai: RAG System for Cultural Heritage",
+    description:
+      "AI-powered system developed during a hackathon to preserve Hassani cultural heritage. Features an intelligent conversational agent using LLaMA 3.1 and ChromaDB for accurate knowledge retrieval with a modern Next.js interface.",
+    tags: ["Next.js 16", "Spring Boot", "LLaMA 3.1", "ChromaDB", "RAG", "AI"],
+    github: "https://github.com/yosayman/TURATH.ai.git",
+    demo: null,
+  },
+  {
     title: "Decentralized Library DApp",
     description:
       "Decentralized library application on Ethereum featuring role management, reputation system, 7-day borrowing logic, and book covers hosted on IPFS.",
