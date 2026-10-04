@@ -43,6 +43,15 @@ npm run preview  # serve the built app locally
 - Vercel/Netlify both work: build command `npm run build`, output dir `dist`.
 - Ensure EmailJS env vars are set in the platform dashboard; otherwise the contact form will show a configuration error.
 
+### SmartTijara legal pages
+
+- `/privacy`, `/terms`, and `/data-deletion` are public HTML entry points built by Vite. Their content and metadata are available without JavaScript or authentication.
+- Shared legal-page styling imports the existing portfolio typography and styles from `src/index.css`. The homepage components are unchanged.
+- The current live site uses Vercel. Confirm the Vercel project's Root Directory is `portfolio`, where `vercel.json` supplies the three exact-path rewrites. Build with `npm run build` and publish `dist`.
+- Vite development and preview mirror these rewrites. For another static host, serve each exact route from its corresponding `dist/<route>/index.html`, preserving the `/assets/` paths; configure a rewrite if the host would otherwise redirect or return 404.
+- After redeploying, check each exact HTTPS URL without cookies, authorization headers, or redirect following. Expect HTTP 200 with its legal title and content, then check the styles and cross-links in a private browser window.
+- Contact email: `ayoub.kaddioui.eng@gmail.com`. No in-app deletion feature is claimed by these pages.
+
 ## Troubleshooting
 - **Contact form shows configuration error**: check `.env` keys and that they are exposed as VITE_ variables; restart dev server.
 - **Emails not received**: verify EmailJS template placeholders match the fields in `Contact.jsx` (name/email/message) and that the service template is active.
@@ -56,4 +65,3 @@ cmake --build build
 ./build/snake
 ```
 Controls: arrows or WASD to move, `q` to quit. If linking fails, install `ncurses` dev headers and clear/recreate `build/`.
-

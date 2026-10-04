@@ -2,6 +2,14 @@ import { ArrowUpRight, Github } from "lucide-react";
 
 const projects = [
   {
+    title: "SmartTijara: AI-Powered Conversational CRM",
+    description:
+      "A conversational commerce platform and CRM that automates customer relations over WhatsApp. Features a custom AI agent communicating in Moroccan Darija with real-time human takeover, built with a resilient Spring Boot backend, Redis caching, and a Next.js dashboard.",
+    tags: ["React/Next.js", "Spring Boot", "Redis", "WhatsApp API", "AI Agent", "SaaS"],
+    github: "https://github.com/ayoubkad/SmartTijara.git",
+    demo: null,
+  },
+  {
     title: "TURATH.ai: RAG System for Cultural Heritage",
     description:
       "AI-powered system developed during a hackathon to preserve Hassani cultural heritage. Features an intelligent conversational agent using LLaMA 3.1 and ChromaDB for accurate knowledge retrieval with a modern Next.js interface.",
@@ -39,7 +47,7 @@ export default function Projects() {
             Selected work that blends product strategy with engineering execution.
           </h2>
         </div>
-        <div className="mt-10 grid gap-6 lg:grid-cols-3">
+        <div className="mt-10 grid gap-6 md:grid-cols-2">
           {projects.map((project, index) => (
             <article
               key={project.title}
