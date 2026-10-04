@@ -85,7 +85,7 @@ export default function Hero() {
               </p>
             </div>
             <div className="rounded-2xl border border-white/10 bg-white/5 p-4">
-              <p className="text-2xl font-semibold text-white"><AnimatedCounter end={3} suffix="+" /></p>
+              <p className="text-2xl font-semibold text-white"><AnimatedCounter end={4} suffix="+" /></p>
               <p className="mt-1 text-xs uppercase tracking-[0.2em] text-slate-400">
                 Projects
               </p>
