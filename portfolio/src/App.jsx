@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import About from "./components/About";
 import Contact from "./components/Contact";
+import Experience from "./components/Experience";
 import Footer from "./components/Footer";
 import Hero from "./components/Hero";
 import Navbar from "./components/Navbar";
@@ -10,6 +11,7 @@ import TechStack from "./components/TechStack";
 
 const navLinks = [
   { href: "#about", label: "About" },
+  { href: "#experience", label: "Experience" },
   { href: "#stack", label: "Tech Stack" },
   { href: "#projects", label: "Projects" },
   { href: "#contact", label: "Contact" },
@@ -58,6 +60,7 @@ export default function App() {
         <main>
           <Hero />
           <About />
+          <Experience />
           <TechStack />
           <Projects />
           <Contact />

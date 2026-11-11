@@ -3,8 +3,9 @@
 ![Portfolio Preview](portfolio/images/img.png)
 
 Personal portfolio built with React + Vite, showcasing my
-projects, skills, and background as a CS engineering student
-at FST Errachidia.
+projects, skills, and background as a computer engineering
+student at FST Errachidia, focused on DevOps, cloud, and
+platform engineering.
 
 ## Repository Description
 - `portfolio/`: React + Vite single-page site styled with Tailwind; contact form uses EmailJS credentials from `.env`.

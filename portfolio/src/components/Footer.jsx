@@ -7,12 +7,15 @@ export default function Footer() {
         <div>
           <p className="text-base font-semibold text-white">Ayoub Kaddioui</p>
           <p className="mt-2 text-xs text-slate-400">
-            State Engineer in Software Engineering.
+            Élève-ingénieur d'État in Computer Engineering.
           </p>
         </div>
         <div className="flex items-center gap-6">
           <a className="transition hover:text-white" href="#about">
             About
+          </a>
+          <a className="transition hover:text-white" href="#experience">
+            Experience
           </a>
           <a className="transition hover:text-white" href="#stack">
             Stack
@@ -45,7 +48,7 @@ export default function Footer() {
           </a>
           <a
             className="rounded-full border border-white/10 bg-white/5 p-2 text-slate-200 transition hover:border-[#f2c261]/60 hover:text-white"
-            href="mailto:ayoub.kaddioui.eng@gmail.com"
+            href="mailto:contact@ayoubkaddioui.dev"
             aria-label="Email"
           >
             <Mail className="h-4 w-4" />

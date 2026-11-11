@@ -34,10 +34,10 @@ export default function Navbar({ links }) {
           />
           <div className="leading-tight">
             <p className="text-sm font-semibold text-white">Ayoub Kaddioui</p>
-            <p className="text-xs text-slate-300">Ingénieur d'État</p>
+            <p className="text-xs text-slate-300">Élève-ingénieur</p>
           </div>
         </a>
-        <div className="hidden items-center gap-8 text-sm text-slate-300 md:flex">
+        <div className="hidden items-center gap-5 text-sm text-slate-300 lg:flex lg:gap-8">
           {links.map((link) => (
             <a
               key={link.href}
@@ -64,7 +64,7 @@ export default function Navbar({ links }) {
             <span className="sm:hidden">CV</span>
           </a>
           <button
-            className="flex h-9 w-9 items-center justify-center rounded-full border border-white/10 bg-white/5 text-slate-200 transition hover:text-white md:hidden"
+            className="flex h-9 w-9 items-center justify-center rounded-full border border-white/10 bg-white/5 text-slate-200 transition hover:text-white lg:hidden"
             onClick={() => setMenuOpen(!menuOpen)}
             aria-label="Toggle menu"
           >
@@ -75,8 +75,8 @@ export default function Navbar({ links }) {
 
       {/* Mobile menu */}
       <div
-        className={`mx-auto mt-2 max-w-6xl overflow-hidden rounded-2xl border border-white/10 bg-[#0b2f3a]/95 backdrop-blur-xl transition-all duration-300 md:hidden ${
-          menuOpen ? "max-h-64 opacity-100" : "max-h-0 opacity-0 border-transparent"
+        className={`mx-auto mt-2 max-w-6xl overflow-hidden rounded-2xl border border-white/10 bg-[#0b2f3a]/95 backdrop-blur-xl transition-all duration-300 lg:hidden ${
+          menuOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0 border-transparent"
         }`}
       >
         <div className="flex flex-col gap-1 p-4">

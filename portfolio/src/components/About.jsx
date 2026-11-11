@@ -2,16 +2,16 @@ import { CheckCircle2 } from "lucide-react";
 
 const highlights = [
   {
-    title: "Engineering Principles",
-    text: "Solid architecture, clean abstractions, and reliable patterns drive every build.",
+    title: "Ingénieur d'État, Computer Engineering",
+    text: "FST Errachidia · 2025–2028. Élève-ingénieur d'État.",
   },
   {
-    title: "Problem Solving",
-    text: "I break down complex challenges into clear steps and measurable wins.",
+    title: "B.Sc. in Software Engineering",
+    text: "FST Errachidia · 2024–2025.",
   },
   {
-    title: "Collaboration",
-    text: "Transparent communication and shared ownership keep teams aligned and shipping.",
+    title: "DEUST, MIP track",
+    text: "FST Errachidia · 2023–2024.",
   },
 ];
 
@@ -24,16 +24,25 @@ export default function About() {
             About Me
           </p>
           <h2 className="text-3xl font-semibold text-white sm:text-4xl">
-            Learning with curiosity, building with purpose.
+            Computer engineering student focused on DevOps, cloud, and platform work.
           </h2>
           <p className="text-base text-slate-200">
-            I'm an Engineering student at FST Errachidia specializing in Computer Engineering. I built a full-stack Ethereum DApp for my PFE and designed a custom in-memory database engine in C with CI/CD pipelines.
+            I am an Élève-ingénieur d'État in Computer Engineering at FST
+            Errachidia. I am seeking a PFA internship in DevOps, Cloud, or
+            Platform Engineering, and I am open to internships across Morocco.
           </p>
           <p className="text-base text-slate-200">
-            Outside class, I co-organize tech events at the Bisoft Engineering Club. I love low-level systems as much as modern web tech — and I'm always building something.
+            I build Dockerized multi-service applications, automate CI and
+            DevSecOps checks with GitHub Actions, CodeQL, and Qodana, and
+            profile application performance. My background includes Linux,
+            FastAPI, and Spring Boot.
           </p>
           <div className="flex flex-wrap gap-3">
-            {["Always learning", "Builder mentality", "Detail-oriented"].map((pill) => (
+            {[
+              "Arabic · Native",
+              "English · Professional working proficiency",
+              "French · Intermediate",
+            ].map((pill) => (
               <span
                 key={pill}
                 className="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-slate-200"

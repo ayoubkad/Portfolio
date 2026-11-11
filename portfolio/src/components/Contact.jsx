@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import emailjs from "@emailjs/browser";
-import { Github, Linkedin, Mail, CheckCircle, AlertTriangle } from "lucide-react";
+import { Github, Linkedin, Mail, MapPin, Phone, CheckCircle, AlertTriangle } from "lucide-react";
 
 export default function Contact() {
   const [form, setForm] = useState({ name: "", email: "", message: "" });
@@ -120,12 +120,11 @@ export default function Contact() {
               Contact
             </p>
             <h2 className="text-3xl font-semibold text-white sm:text-4xl">
-              Let's build something purposeful together.
+              Open to a PFA internship in Morocco.
             </h2>
             <p className="text-base text-slate-200">
-              Have a product idea, engineering challenge, or collaboration in mind?
-              I can help you shape the roadmap, design the architecture, and deliver a
-              polished user experience.
+              I am looking for a PFA internship in DevOps, Cloud, or Platform
+              Engineering. Email, phone, and the form below all reach me.
             </p>
             <div className="flex flex-wrap gap-4 text-sm">
               <a
@@ -148,11 +147,22 @@ export default function Contact() {
               </a>
               <a
                 className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-slate-200 transition hover:border-[#f2c261]/50"
-                href="mailto:ayoub.kaddioui.eng@gmail.com"
+                href="mailto:contact@ayoubkaddioui.dev"
               >
                 <Mail className="h-4 w-4 text-[#f2c261]" />
-                Email
+                contact@ayoubkaddioui.dev
               </a>
+              <a
+                className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-slate-200 transition hover:border-[#f2c261]/50"
+                href="tel:+212658957078"
+              >
+                <Phone className="h-4 w-4 text-[#f2c261]" />
+                +212 6 58 95 70 78
+              </a>
+              <span className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-slate-200">
+                <MapPin className="h-4 w-4 text-[#f2c261]" />
+                Oued Zem, Morocco
+              </span>
             </div>
           </div>
           <form
