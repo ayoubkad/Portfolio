@@ -26,7 +26,7 @@ cp .env.example .env
 Fill `VITE_EMAILJS_SERVICE_ID`, `VITE_EMAILJS_TEMPLATE_ID`, and `VITE_EMAILJS_PUBLIC_KEY` with values from your EmailJS dashboard. Restart the dev server after editing `.env`.
 
 ## Project Layout (portfolio/)
-- `src/App.jsx`: mounts the page sections and scroll reveal observer.
+- `src/App.jsx`: mounts the page sections (hero, about, experience, stack, projects, contact) and the scroll reveal observer.
 - `src/components/Contact.jsx`: EmailJS form handling and validation; requires the env keys above.
 - `src/components/*`: hero/about/stack/projects/footer + scroll-to-top.
 - `index.css` + `tailwind.config.js`: global styles and design tokens.
@@ -50,7 +50,7 @@ npm run preview  # serve the built app locally
 - The current live site uses Vercel. Confirm the Vercel project's Root Directory is `portfolio`, where `vercel.json` supplies the three exact-path rewrites. Build with `npm run build` and publish `dist`.
 - Vite development and preview mirror these rewrites. For another static host, serve each exact route from its corresponding `dist/<route>/index.html`, preserving the `/assets/` paths; configure a rewrite if the host would otherwise redirect or return 404.
 - After redeploying, check each exact HTTPS URL without cookies, authorization headers, or redirect following. Expect HTTP 200 with its legal title and content, then check the styles and cross-links in a private browser window.
-- Contact email: `ayoub.kaddioui.eng@gmail.com`. No in-app deletion feature is claimed by these pages.
+- Contact email: `contact@ayoubkaddioui.dev`. No in-app deletion feature is claimed by these pages.
 
 ## Troubleshooting
 - **Contact form shows configuration error**: check `.env` keys and that they are exposed as VITE_ variables; restart dev server.

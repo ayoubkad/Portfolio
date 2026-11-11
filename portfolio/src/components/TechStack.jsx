@@ -1,35 +1,27 @@
-import { Code2, Database, GitBranch, Globe, Layers, Server } from "lucide-react";
+import { Box, Database, Server, ShieldCheck } from "lucide-react";
 
 const stack = [
   {
-    name: "React",
-    detail: "Component-driven UI engineering",
-    icon: Layers,
+    name: "Containers & Systems",
+    detail: "Docker, Linux, Bash, Cloudflare Tunnels, Blackfire, and Git.",
+    icon: Box,
   },
   {
-    name: "Spring Boot",
-    detail: "Robust backend services",
+    name: "CI & DevSecOps",
+    detail: "GitHub Actions, CodeQL, automated builds, and regression tests.",
+    icon: ShieldCheck,
+  },
+  {
+    name: "Backend & APIs",
+    detail:
+      "Python/FastAPI, Java/Spring Boot, Go, REST APIs, API gateways, workers, and webhooks.",
     icon: Server,
   },
   {
-    name: "JavaScript",
-    detail: "ES6+ product logic",
-    icon: Code2,
-  },
-  {
-    name: "SQL",
-    detail: "Relational data modeling",
+    name: "Data & Foundations",
+    detail:
+      "PostgreSQL, Supabase, ChromaDB, SQL, C/C++, data structures, and Agile/Scrum.",
     icon: Database,
-  },
-  {
-    name: "REST APIs",
-    detail: "Secure system integration",
-    icon: Globe,
-  },
-  {
-    name: "Git",
-    detail: "Versioned collaboration",
-    icon: GitBranch,
   },
 ];
 
@@ -42,10 +34,10 @@ export default function TechStack() {
             Tech Stack
           </p>
           <h2 className="mt-4 text-3xl font-semibold text-white sm:text-4xl">
-            Tools I rely on to deliver modern, resilient products.
+            Tools I use for containers, CI, APIs, and data.
           </h2>
         </div>
-        <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-10 grid gap-6 sm:grid-cols-2">
           {stack.map((item, index) => {
             const Icon = item.icon;
             return (

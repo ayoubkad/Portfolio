@@ -5,8 +5,8 @@ export default function AvailabilityBadge() {
         <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-[#4ade80] opacity-75"></span>
         <span className="relative inline-flex h-2 w-2 rounded-full bg-[#4ade80]"></span>
       </span>
-      <span className="hidden text-[12px] font-medium leading-normal tracking-normal text-[#86efac] md:block">
-        Available for a Summer 2026 Internship
+      <span className="text-[12px] font-medium leading-normal tracking-normal text-[#86efac]">
+        Open to PFA internships in Morocco
       </span>
     </div>
   );
