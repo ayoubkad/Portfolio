@@ -65,7 +65,7 @@ export default function Hero() {
           <div className="reveal flex flex-wrap items-center gap-4" data-reveal>
             <a
               className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-[#d79b2e] to-[#f2c261] px-6 py-3 text-sm font-semibold text-[#0b2f3a] shadow-lg shadow-[#d79b2e]/30 transition hover:-translate-y-0.5"
-              href="/CV.pdf"
+              href="/CV_final_DevOps.pdf"
               target="_blank"
               rel="noopener noreferrer"
             >
